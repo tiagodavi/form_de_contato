@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- @author Tiago Davi - tiagodavi.blogspot.com -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulário de contato</title>
+		<!-- CDN JQuery -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<!-- CDN JQuery Validate -->
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+		<!-- Validação do contato -->
+		<script type="text/javascript" src="js/contato.js"></script>
+		<!-- CSS do contato -->
+		<link type="text/css" rel="stylesheet" href="css/contato.css" media="screen">
+	</head>
+	<body>
+		<div id="formulario">
+			<form action="envia.php" id="form" method="post" enctype="multipart/form-data">
+				<div>
+				 <!-- Campos padrões (você pode adicionar quantos quiser além desses) -->
+				  <label for="nome">Nome</label>
+				  <input type="text" name="nome">
+				  
+				  <label for="nome">E-mail</label>
+				  <input type="text" name="email">
+				  
+				  <label for="nome">Assunto</label>
+				  <input type="text" name="assunto">
+				  
+				  <!-- ANEXO (somente se tiver necessidade) -->
+				  <label for="anexo">Anexo</label>
+				  <input type="file" name="anexo">
+				  
+				  <label for="mensagem">Mensagem</label>
+				  <textarea name="mensagem"></textarea>
+				  
+				  <!-- Configurações do email (Preencher os values) -->
+				  
+				  <!-- Remetente email -->
+				  <input type="hidden" name="from" value="">
+				  <!-- Nome do remetente (só funciona em linux)-->
+				  <input type="hidden" name="name" value="" />
+				  <!-- Destinatário email -->
+				  <input type="hidden" name="to" value="">
+				  <!-- Assunto -->
+				  <input type="hidden" name="subject"  value="Contato" />
+				  <!-- Redirecionar em caso de erro -->
+				  <input type="hidden" name="redirect_error" value="erro.htm" />
+				  <!-- Redirecionar em caso de sucesso -->
+				  <input type="hidden" name="redirect_success" value="sucesso.htm" />
+				  <input type="submit" value="Enviar" class="enviar" />      
+                 </div>
+			</form>
+		</div>
+	</body>
+</html>

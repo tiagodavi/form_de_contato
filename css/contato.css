@@ -1,0 +1,14 @@
+#form input{
+display:block;
+}
+#form label{
+vertical-align:top;
+}
+
+/* CSS dos erros */
+label.error{color:red; font-style:italic; width:auto; display:inline;}
+div.error{display:none;}
+input.checkbox{border:none;}
+input.error{border:2px dotted red;}
+textarea.error{border:2px dotted red;}
+select.error{border:2px dotted red;}
